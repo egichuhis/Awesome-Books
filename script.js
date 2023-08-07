@@ -37,7 +37,8 @@ function showBooks() {
     const hr = document.createElement('hr');
 
     // Append items to myBookDiv
-    myBookDiv.appendChild(bookTitle).appendChild(bookAuthor);
+    myBookDiv.appendChild(bookTitle);
+    myBookDiv.appendChild(bookAuthor);
     myBookDiv.appendChild(removeBtn);
     myBookDiv.appendChild(hr);
 
