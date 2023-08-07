@@ -37,7 +37,8 @@ function showBooks() {
     const hr = document.createElement('hr');
 
     // Append items to myBookDiv
-    myBookDiv.appendChild(bookTitle).appendChild(bookAuthor);
+    myBookDiv.appendChild(bookTitle);
+    myBookDiv.appendChild(bookAuthor);
     myBookDiv.appendChild(removeBtn);
     myBookDiv.appendChild(hr);
 
@@ -70,3 +71,24 @@ function addBook() {
   document.getElementById('title').value = '';
   document.getElementById('author').value = '';
 }
+
+function removeBook(bookTitleToRemove) {
+  // Use filter to create a new array without the book to remove
+  const myBooksUpdated = myBooks.filter((myBook) => myBook.bookTitle !== bookTitleToRemove);
+
+  // Save updated myBooks array to localStorage
+  localStorage.setItem('myBooks', JSON.stringify(myBooksUpdated));
+
+  // Update the myBooks array with the updated version
+  myBooks.length = 0;
+  myBooks.push(...myBooksUpdated);
+
+  // Call showBooks() to see all books
+  showBooks();
+}
+
+// Add event listeners
+addBtn.addEventListener('click', addBook);
+
+// Initial display of books
+showBooks();
