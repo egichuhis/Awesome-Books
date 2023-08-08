@@ -9,3 +9,23 @@
 #add-books button {
   width: fit-content;
 }
+
+header {
+  text-align: center;
+}
+
+#list-books {
+  border: solid;
+  padding: 8px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  height: 30px;
+  box-shadow: black 4px 3px;
+}

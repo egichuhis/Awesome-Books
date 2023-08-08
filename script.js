@@ -14,17 +14,19 @@ function showBooks() {
   // Show all books in the myBooks array using forEach() loop
   myBooks.forEach((myBook) => {
     const myBookDiv = document.createElement('div'); // Create a new div for each book
+    myBookDiv.classList.add('row');
 
     // Create h4 element for title and append textContent
     const bookTitle = document.createElement('h4');
     bookTitle.textContent = myBook.bookTitle;
 
     // Create h4 element for author and append textContent
-    const bookAuthor = document.createElement('h4');
-    bookAuthor.textContent = myBook.bookAuthor;
+    const bookDetails = document.createElement('h4');
+    bookDetails.textContent = `${myBook.bookTitle} by ${myBook.bookAuthor}`;
 
     // Create remove button
     const removeBtn = document.createElement('button');
+    removeBtn.classList.add('remove-btn');
     removeBtn.textContent = 'Remove';
 
     // Add event listener to remove button
@@ -34,13 +36,13 @@ function showBooks() {
     });
 
     // Add hr
-    const hr = document.createElement('hr');
+    // const hr = document.createElement('hr');
 
     // Append items to myBookDiv
-    myBookDiv.appendChild(bookTitle);
-    myBookDiv.appendChild(bookAuthor);
+    myBookDiv.appendChild(bookDetails);
+    // myBookDiv.appendChild(bookAuthor);
     myBookDiv.appendChild(removeBtn);
-    myBookDiv.appendChild(hr);
+    // myBookDiv.appendChild(hr);
 
     listBooks.appendChild(myBookDiv); // Append myBookDiv to the listBooks container
   });
