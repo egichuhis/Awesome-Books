@@ -75,5 +75,3 @@ class BookLibrary {
 
 // eslint-disable-next-line no-unused-vars
 const bookLibrary = new BookLibrary();
-
-}
