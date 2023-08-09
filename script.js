@@ -29,9 +29,8 @@ class BookLibrary {
       removeBtn.classList.add('remove-btn');
       removeBtn.textContent = 'Remove';
       removeBtn.addEventListener('click', () => {
-        this.removeBook(myBook.bookTitle);
+        this.removeBook(myBook.bookID);
       });
-
       myBookDiv.appendChild(bookDetails);
       myBookDiv.appendChild(removeBtn);
       this.listBooks.appendChild(myBookDiv);
@@ -39,6 +38,7 @@ class BookLibrary {
   }
 
   addBook() {
+    const bookID = this.myBooks.length + 1;
     const bookTitle = document.getElementById('title').value.trim();
     const bookAuthor = document.getElementById('author').value.trim();
     const errorSpan = document.getElementById('error-msg');
@@ -49,7 +49,7 @@ class BookLibrary {
       return;
     }
 
-    this.myBooks.push({ bookTitle, bookAuthor });
+    this.myBooks.push({ bookID, bookTitle, bookAuthor });
     localStorage.setItem('myBooks', JSON.stringify(this.myBooks));
 
     // Call showBooks() to see all books
@@ -60,8 +60,8 @@ class BookLibrary {
     document.getElementById('author').value = '';
   }
 
-  removeBook(bookTitleToRemove) {
-    const myBooksUpdated = this.myBooks.filter((myBook) => myBook.bookTitle !== bookTitleToRemove);
+  removeBook(bookIDToRemove) {
+    const myBooksUpdated = this.myBooks.filter((myBook) => myBook.bookID !== bookIDToRemove);
     localStorage.setItem('myBooks', JSON.stringify(myBooksUpdated));
 
     // Update the myBooks array with the updated version
@@ -73,5 +73,5 @@ class BookLibrary {
   }
 }
 
-// eslint-disable-next-line no-unused-vars
 const bookLibrary = new BookLibrary();
+bookLibrary();
