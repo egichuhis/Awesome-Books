@@ -17,14 +17,14 @@
                     <h3>Awesome Books</h3>
                 </a>
                 <ul>
-                    <li>
-                        <a href="#">List</a>
+                    <li id="list-books-link">
+                        <a href="#list-books">List</a>
                     </li>
-                    <li>
-                        <a href="#">Add New</a>
+                    <li id="add-books-link">
+                        <a href="#add-books">Add Book</a>
                     </li>
-                    <li>
-                        <a href="#">Contact</a>
+                    <li id="contact-link">
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -35,30 +35,38 @@
         </header>
 
         <main>
-            <div id="list-books">
-            </div>
+            <section id="list-books-section">
+                <h2>All Awesome Books</h2>
+                <div id="list-books">
 
+                </div>
+            </section>
 
-            <hr width="30%">
-            <div id="add-books">
-                <h2>Add a new book</h2>
-                <input type="text" name="title" id="title" placeholder="Title">
-                <input type="text" name="author" id="author" placeholder="Author">
-                <span>
-                    <button id="add-btn" type="submit">Add</button>
-                </span>
-                <span id="error-msg"></span>
-            </div>
-            <div id="contact">
-                <h2>Contact Information</h2>
-                <p>Do you have any questions or you just want to say hello?</p>
-                <p>You can reach out to us via: </p>
-                <ul>
-                    <li>Email: mail@mail.com</li>
-                    <li>Phone: 012-345-678-910</li>
-                    <li>Address: 00210 Kenyatta Avenue, Nakuru, Kenya</li>
-                </ul>
-            </div>
+            <section id="add-books-section">
+                <div id="add-books">
+                    <h2>Add a new book</h2>
+                    <input type="text" name="title" id="title" placeholder="Title">
+                    <input type="text" name="author" id="author" placeholder="Author">
+                    <span>
+                        <button id="add-btn" type="submit">Add</button>
+                    </span>
+                    <span id="error-msg"></span>
+                </div>
+
+            </section>
+            <section id="contact-section">
+                <div id="contact">
+                    <h2>Contact Information</h2>
+                    <p>Do you have any questions or you just want to say hello?</p>
+                    <p>You can reach out to us via: </p>
+                    <ul>
+                        <li>Email: mail@mail.com</li>
+                        <li>Phone: 012-345-678-910</li>
+                        <li>Address: 00210 Kenyatta Avenue, Nakuru, Kenya</li>
+                    </ul>
+                </div>
+
+            </section>
         </main>
 
         <footer>

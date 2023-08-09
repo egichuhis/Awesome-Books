@@ -84,3 +84,30 @@ function dateTime() {
 }
 
 dateTime();
+
+const listBookSection = document.getElementById('list-books-section');
+const addBooksSection = document.getElementById('add-books-section');
+const contactSection = document.getElementById('contact-section');
+const addBooksLink = document.getElementById('add-books-link');
+const listBooksLink = document.getElementById('list-books-link');
+const contactLink = document.getElementById('contact-link');
+
+function toggleSectionVisibility(sectionId) {
+  const sections = [listBookSection, addBooksSection, contactSection];
+
+  sections.forEach((section) => {
+    if (section.id === sectionId) {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+
+listBooksLink.addEventListener('click', () => {
+  toggleSectionVisibility('list-books-section');
+});
+
+addBooksLink.addEventListener('click', () => {
+  toggleSectionVisibility('add-books-section');
+});
