@@ -1,0 +1,48 @@
+#add-books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+#add-books input {
+  width: 55%;
+  font-size: 18px;
+}
+
+#add-books span {
+  display: flex;
+  width: 55%;
+  justify-content: flex-end;
+}
+
+#add-books button {
+  height: 30px;
+  padding: 0 10px;
+  box-shadow: black 3px 3px;
+}
+
+header {
+  text-align: center;
+}
+
+#list-books {
+  border: solid;
+  padding: 8px;
+  margin-bottom: 25px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  height: 30px;
+  box-shadow: black 4px 3px;
+}
+
+#error-msg {
+  color: red;
+}
