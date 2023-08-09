@@ -9,3 +9,7 @@
 #add-books button {
   width: fit-content;
 }
+
+#error-msg {
+  color: red;
+}
