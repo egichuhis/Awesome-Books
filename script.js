@@ -60,4 +60,20 @@ class BookLibrary {
     document.getElementById('author').value = '';
   }
 
- 
+  removeBook(bookTitleToRemove) {
+    const myBooksUpdated = this.myBooks.filter((myBook) => myBook.bookTitle !== bookTitleToRemove);
+    localStorage.setItem('myBooks', JSON.stringify(myBooksUpdated));
+
+    // Update the myBooks array with the updated version
+    this.myBooks.length = 0;
+    this.myBooks.push(...myBooksUpdated);
+
+    // Call showBooks() to see all books
+    this.showBooks();
+  }
+}
+
+// eslint-disable-next-line no-unused-vars
+const bookLibrary = new BookLibrary();
+
+}
