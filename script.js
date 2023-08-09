@@ -29,7 +29,6 @@ function showBooks() {
 
     // Add event listener to remove button
     removeBtn.addEventListener('click', () => {
-      // eslint-disable-next-line no-use-before-define
       removeBook(myBook.bookTitle);
     });
 
