@@ -74,4 +74,13 @@ class BookLibrary {
 }
 
 const bookLibrary = new BookLibrary();
-bookLibrary();
+bookLibrary.showBooks();
+
+function dateTime() {
+  const currentDate = new Date();
+  const readDate = currentDate.toUTCString();
+  const currentTime = document.getElementById('current-time');
+  currentTime.textContent = readDate;
+}
+
+dateTime();
