@@ -41,11 +41,11 @@ class BookLibrary {
   addBook() {
     const bookTitle = document.getElementById('title').value.trim();
     const bookAuthor = document.getElementById('author').value.trim();
+    const errorSpan = document.getElementById('error-msg');
     const errorMsg = 'Both Title and Author must be filled out!';
 
     if (bookTitle === '' || bookAuthor === '') {
-      // eslint-disable-next-line no-alert
-      alert(errorMsg);
+      errorSpan.textContent = errorMsg;
       return;
     }
 

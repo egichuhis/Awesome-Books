@@ -42,3 +42,7 @@ header {
   height: 30px;
   box-shadow: black 4px 3px;
 }
+
+#error-msg {
+  color: red;
+}
