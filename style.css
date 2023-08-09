@@ -23,12 +23,32 @@
 }
 
 header {
+  display: flex;
   text-align: center;
+  justify-content: space-between;
+  border: solid 1px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 32px;
+  margin-right: 12px;
+}
+
+nav a {
+  text-decoration: none;
 }
 
 #list-books {
   border: solid;
   padding: 8px;
+  margin-top: 25px;
   margin-bottom: 25px;
 }
 
