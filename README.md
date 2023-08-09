@@ -50,12 +50,12 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Display all books saved at the top part of the page.**
-- **Add new book when a user clicks the "Add" button.**
-- **Display the new book in the page.**
-- **Remove the correct book when a user clicks the "Remove" button.**
-- **The removed book dissapears from the page.**
-- **Data is preserved in the browser's memory by using localStorage.**
+- **Navigation bar**
+- **Contact section**
+- **Footer section**
+- **List of Books section**
+- **Add Book section**
+- **Remove book feature**
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,8 +147,8 @@ Example command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add Styling to website to improve UI/UX**
-- [ ] **Add other website sections**
-- [ ] **Add Navigation to website**
+- [ ] **Design with Bootstrap**
+- [ ] **Refactor JavaScript with ES6**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
