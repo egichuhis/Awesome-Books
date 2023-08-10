@@ -111,3 +111,6 @@ listBooksLink.addEventListener('click', () => {
 addBooksLink.addEventListener('click', () => {
   toggleSectionVisibility('add-books-section');
 });
+contactLink.addEventListener('click', () => {
+  toggleSectionVisibility('contact-section');
+});
