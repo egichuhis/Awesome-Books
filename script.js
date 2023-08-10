@@ -74,4 +74,44 @@ class BookLibrary {
 }
 
 const bookLibrary = new BookLibrary();
-bookLibrary();
+bookLibrary.showBooks();
+
+function dateTime() {
+  const currentDate = new Date();
+  const readDate = currentDate.toUTCString();
+  const currentTime = document.getElementById('current-time');
+  currentTime.textContent = readDate;
+}
+
+dateTime();
+
+const listBookSection = document.getElementById('list-books-section');
+const addBooksSection = document.getElementById('add-books-section');
+const contactSection = document.getElementById('contact-section');
+const addBooksLink = document.getElementById('add-books-link');
+const listBooksLink = document.getElementById('list-books-link');
+const contactLink = document.getElementById('contact-link');
+
+function toggleSectionVisibility(sectionId) {
+  const sections = [listBookSection, addBooksSection, contactSection];
+
+  sections.forEach((section) => {
+    if (section.id === sectionId) {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+
+listBooksLink.addEventListener('click', () => {
+  toggleSectionVisibility('list-books-section');
+});
+
+addBooksLink.addEventListener('click', () => {
+  toggleSectionVisibility('add-books-section');
+});
+
+contactLink.addEventListener('click', () => {
+  toggleSectionVisibility('contact-section');
+});
